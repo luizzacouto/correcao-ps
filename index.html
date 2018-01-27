@@ -1,666 +1,483 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-		<meta charset="utf-8" />
-		<title>Processo Seletivo - Edools</title>
 
-		<meta name="description" content="Case do processo seletivo" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta charset="utf-8" />
+	<title>Processo Seletivo - Edools</title>
 
-		<!-- bootstrap & fontawesome -->
-		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="assets/font-awesome/4.5.0/css/font-awesome.min.css" />
+	<meta name="description" content="Case do processo seletivo" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
-		<!-- page specific plugin styles -->
+	<!-- bootstrap & fontawesome -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/font-awesome/4.5.0/css/font-awesome.min.css" />
 
-		<!-- text fonts -->
-		<link rel="stylesheet" href="assets/css/fonts.googleapis.com.css" />
+	<!-- page specific plugin styles -->
 
-		<!-- ace styles -->
-		<link rel="stylesheet" href="assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+	<!-- text fonts -->
+	<link rel="stylesheet" href="assets/css/fonts.googleapis.com.css" />
 
-		<!--[if lte IE 9]>
+	<!-- ace styles -->
+	<link rel="stylesheet" href="assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+
+	<!--[if lte IE 9]>
 			<link rel="stylesheet" href="assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
 		<![endif]-->
-		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
-		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+	<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+	<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
 
-		<!--[if lte IE 9]>
+	<!--[if lte IE 9]>
 		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
 		<![endif]-->
 
-		<!-- inline styles related to this page -->
+	<!-- inline styles related to this page -->
 
-		<!-- ace settings handler -->
-		<script src="assets/js/ace-extra.min.js"></script>
+	<!-- ace settings handler -->
+	<script src="assets/js/ace-extra.min.js"></script>
 
-		<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+	<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
 
-		<!--[if lte IE 8]>
+	<!--[if lte IE 8]>
 		<script src="assets/js/html5shiv.min.js"></script>
 		<script src="assets/js/respond.min.js"></script>
 		<![endif]-->
-	</head>
+</head>
 
-	<body class="no-skin">
-		<div id="navbar" class="navbar navbar-default          ace-save-state" style="background-color: rgb(72, 169, 120)">
-			<div class="navbar-container ace-save-state" id="navbar-container">
-				<button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
-					<span class="sr-only">Toggle sidebar</span>
+<body class="no-skin">
+	<div id="navbar" class="navbar navbar-default ace-save-state" style="background-color: rgb(72, 169, 120)">
+		<div class="navbar-container ace-save-state" id="navbar-container">
+			<button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
+				<span class="sr-only">Toggle sidebar</span>
 
-					<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
 
-					<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
 
-					<span class="icon-bar"></span>
-				</button>
+				<span class="icon-bar"></span>
+			</button>
 
-				<div class="navbar-header pull-left">
+			<div class="navbar-header pull-left">
 
-					<a href="index.html" class="navbar-brand" style="font-size: 10px; font-family: 'Open Sans';
+				<a href="http://status.edools.com/" class="navbar-brand" style="font-size: 10px; font-family: 'Open Sans';
 					text-transform: uppercase; margin-top: 4px; text-align: center;
 					border-right: 1px solid rgba(0, 0, 0, 0.2); padding-top: 25px; margin-left: 15px">
-						<a href="http://status.edools.com"><img style="max-width: 114px; margin-right: 26px" src="https://admin.edools.com/edools.png"><br></a>
-						<small>
-							ESCOLA SANTA ROSA
-						</small>
-					</a>
+					<img style="max-width: 114px; margin-right: 26px" src="https://admin.edools.com/edools.png">
+					<small>
+						ESCOLA SANTA ROSA
+					</small>
+				</a>
 
-					<a class="navbar-brand" style="margin-top: 32px; float: right; padding-left: 15px; margin-left: 15px">
-						<img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMS4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ4Ni4xOTYgNDg2LjE5NiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDg2LjE5NiA0ODYuMTk2OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjI1NnB4IiBoZWlnaHQ9IjI1NnB4Ij4KPGc+Cgk8cGF0aCBkPSJNNDgxLjcwOCwyMjAuNDU2bC0yMjguOC0yMDQuNmMtMC40LTAuNC0wLjgtMC43LTEuMy0xYy01LTQuOC0xMy01LTE4LjMtMC4zbC0yMjguOCwyMDQuNmMtNS42LDUtNiwxMy41LTEuMSwxOS4xICAgYzIuNywzLDYuNCw0LjUsMTAuMSw0LjVjMy4yLDAsNi40LTEuMSw5LTMuNGw0MS4yLTM2Ljl2Ny4ydjEwNi44djEyNC42YzAsMTguNywxNS4yLDM0LDM0LDM0YzAuMywwLDAuNSwwLDAuOCwwczAuNSwwLDAuOCwwaDcwLjYgICBjMTcuNiwwLDMxLjktMTQuMywzMS45LTMxLjl2LTEyMS4zYzAtMi43LDIuMi00LjksNC45LTQuOWg3Mi45YzIuNywwLDQuOSwyLjIsNC45LDQuOXYxMjEuM2MwLDE3LjYsMTQuMywzMS45LDMxLjksMzEuOWg3Mi4yICAgYzE5LDAsMzQtMTguNywzNC00Mi42di0xMTEuMnYtMzR2LTgzLjVsNDEuMiwzNi45YzIuNiwyLjMsNS44LDMuNCw5LDMuNGMzLjcsMCw3LjQtMS41LDEwLjEtNC41ICAgQzQ4Ny43MDgsMjMzLjk1Niw0ODcuMjA4LDIyNS40NTYsNDgxLjcwOCwyMjAuNDU2eiBNMzk1LjUwOCwyODcuMTU2djM0djExMS4xYzAsOS43LTQuOCwxNS42LTcsMTUuNmgtNzIuMmMtMi43LDAtNC45LTIuMi00LjktNC45ICAgdi0xMjEuMWMwLTE3LjYtMTQuMy0zMS45LTMxLjktMzEuOWgtNzIuOWMtMTcuNiwwLTMxLjksMTQuMy0zMS45LDMxLjl2MTIxLjNjMCwyLjctMi4yLDQuOS00LjksNC45aC03MC42Yy0wLjMsMC0wLjUsMC0wLjgsMCAgIHMtMC41LDAtMC44LDBjLTMuOCwwLTctMy4xLTctN3YtMTI0Ljd2LTEwNi44di0zMS4zbDE1MS44LTEzNS42bDE1My4xLDEzNi45TDM5NS41MDgsMjg3LjE1NkwzOTUuNTA4LDI4Ny4xNTZ6IiBmaWxsPSIjRkZGRkZGIi8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg=="
-						style="max-width: 20px; float: left">
-						<small style="text-transform: uppercase; font-size: 19px; font-weight: 400;
+				<a class="navbar-brand" style="margin-top: 32px; float: right; padding-left: 15px; margin-left: 15px">
+					<img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMS4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ4Ni4xOTYgNDg2LjE5NiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDg2LjE5NiA0ODYuMTk2OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjI1NnB4IiBoZWlnaHQ9IjI1NnB4Ij4KPGc+Cgk8cGF0aCBkPSJNNDgxLjcwOCwyMjAuNDU2bC0yMjguOC0yMDQuNmMtMC40LTAuNC0wLjgtMC43LTEuMy0xYy01LTQuOC0xMy01LTE4LjMtMC4zbC0yMjguOCwyMDQuNmMtNS42LDUtNiwxMy41LTEuMSwxOS4xICAgYzIuNywzLDYuNCw0LjUsMTAuMSw0LjVjMy4yLDAsNi40LTEuMSw5LTMuNGw0MS4yLTM2Ljl2Ny4ydjEwNi44djEyNC42YzAsMTguNywxNS4yLDM0LDM0LDM0YzAuMywwLDAuNSwwLDAuOCwwczAuNSwwLDAuOCwwaDcwLjYgICBjMTcuNiwwLDMxLjktMTQuMywzMS45LTMxLjl2LTEyMS4zYzAtMi43LDIuMi00LjksNC45LTQuOWg3Mi45YzIuNywwLDQuOSwyLjIsNC45LDQuOXYxMjEuM2MwLDE3LjYsMTQuMywzMS45LDMxLjksMzEuOWg3Mi4yICAgYzE5LDAsMzQtMTguNywzNC00Mi42di0xMTEuMnYtMzR2LTgzLjVsNDEuMiwzNi45YzIuNiwyLjMsNS44LDMuNCw5LDMuNGMzLjcsMCw3LjQtMS41LDEwLjEtNC41ICAgQzQ4Ny43MDgsMjMzLjk1Niw0ODcuMjA4LDIyNS40NTYsNDgxLjcwOCwyMjAuNDU2eiBNMzk1LjUwOCwyODcuMTU2djM0djExMS4xYzAsOS43LTQuOCwxNS42LTcsMTUuNmgtNzIuMmMtMi43LDAtNC45LTIuMi00LjktNC45ICAgdi0xMjEuMWMwLTE3LjYtMTQuMy0zMS45LTMxLjktMzEuOWgtNzIuOWMtMTcuNiwwLTMxLjksMTQuMy0zMS45LDMxLjl2MTIxLjNjMCwyLjctMi4yLDQuOS00LjksNC45aC03MC42Yy0wLjMsMC0wLjUsMC0wLjgsMCAgIHMtMC41LDAtMC44LDBjLTMuOCwwLTctMy4xLTctN3YtMTI0Ljd2LTEwNi44di0zMS4zbDE1MS44LTEzNS42bDE1My4xLDEzNi45TDM5NS41MDgsMjg3LjE1NkwzOTUuNTA4LDI4Ny4xNTZ6IiBmaWxsPSIjRkZGRkZGIi8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==" style="max-width: 20px; float: left">
+					<small style="text-transform: uppercase; font-size: 19px; font-weight: 400;
 						line-height: 27px; font: 'Open Sans', serif; padding-left: 9px">
-							Principal
+						Principal
+					</small>
+					<p>
+						<small style="font-size: 12px; font-family: 'Open Sans'; padding: 0">
+							Home / Dahboard / Principal
 						</small>
-							<p>
-							<small style="font-size: 12px; font-family: 'Open Sans'; padding: 0">
-								Home / Dahboard / Principal
-							</small>
-							</p>
-					</a>
-				   </div>
-				</div>
-			</div><!-- /.navbar-container -->
+					</p>
+				</a>
+			</div>
 		</div>
+	</div>
+	<!-- /.navbar-container -->
 
 
-			<div class="main-content">
-				<div class="main-content-inner">
-					<div class="page-content" style="padding: 0; background-color: #f4f2f0">
+	<div class="main-content">
+		<div class="main-content-inner">
+			<div class="page-content" style="padding: 0; background-color: #f4f2f0">
+				<div class="row">
+					<div class="col-xs-12">
+						<!-- PAGE CONTENT BEGINS -->
+						<div class="alert alert-block alert-success" style="background-color: #5ab185; border-color: transparent; border: 0; padding: 9.3px">
+							<button type="button" class="close" data-dismiss="alert">
+								<i class="ace-icon fa fa-times"></i>
+							</button>
+
+							<small style="color: #FFF; font-size: 15px; margin-left: 25px"> Olá, Admin. Para detalhes da nossa integração com a API acesso nossa
+								<a href="http://docs.edools.com" target="_blank" style="font-color: #FFF">
+									<u>documentação</u>
+								</a> e saiba como trabalhar os endpoints.</small>
+						</div>
+
 						<div class="row">
-							<div class="col-xs-12">
-								<!-- PAGE CONTENT BEGINS -->
-								<div class="alert alert-block alert-success" style="background-color: #5ab185; border-color: transparent;
-								border: 0; padding: 9.3px">
-									<button type="button" class="close" data-dismiss="alert">
-										<i class="ace-icon fa fa-times"></i>
-									</button>
+							<div class="space-6"></div>
 
-									<small style="color: #FFF; font-size: 15px; margin-left: 25px"> Olá, Admin. Para detalhes da nossa integração com a API acesso nossa <a href="http://docs.edools.com" target="_blank" style="font-color: #FFF"><u>documentação</u></a> e saiba como trabalhar os endpoints.</small>
+							<div class="col-sm-12 infobox-container" style="padding-bottom: 15px">
+								<div class="infobox infobox-green" style="width: 200px; height: 70px; background-color: rgb(127, 192, 158);
+											margin:-10px; border: none; text-align: center; padding: 2px; overflow: visible">
+									<small style="text-transform: uppercase; font-size: 16px; font-weight: 400;
+											line-height: 27px; color: #FFF">
+										<b>Alunos Ativos</b>
+									</small>
+									<div class="space-6" style="margin: 0"></div>
+									<p>
+										<small style="text-transform: uppercase; font-size: 30px; padding: 0; color: #FFF">
+											29
+										</small>
+									</p>
 								</div>
 
-								<div class="row">
-									<div class="space-6"></div>
-
-									<div class="col-sm-12 infobox-container" style="padding-bottom: 15px">
-										<div class="infobox infobox-green" style="width: 200px; height: 70px; background-color: rgb(127, 192, 158);
-											margin:-10px; border: none; text-align: center; padding: 2px; overflow: visible">
-											<small style="text-transform: uppercase; font-size: 13px; font-weight: 400;
-											line-height: 27px; color: #FFF">
-												<b>Alunos Ativos</b>
-											</small>
-											<div class="space-6" style="margin: 0"></div>
-											<p>
-											<small style="text-transform: uppercase; font-size: 25px; padding: 0; color: color: #FFF">
-												29
-											</small>
-											</p>
-										</div>
-
-										<div class="infobox infobox-blue" style="width: 200px; height: 70px; background-color: rgb(127, 192, 158);
+								<div class="infobox infobox-blue" style="width: 200px; height: 70px; background-color: rgb(127, 192, 158);
 											margin:-10px; border: none; text-align: center; padding: 2px; overflow: visible; overflow: visible">
-											<small style="text-transform: uppercase; font-size: 13px; font-weight: 400;
+									<small style="text-transform: uppercase; font-size: 16px; font-weight: 400;
 											line-height: 27px; color: #FFF">
-												<b>Leads</b>
-											</small>
-											<div class="space-6" style="margin: 0"></div>
-											<p>
-											<small style="text-transform: uppercase; font-size: 25px; padding: 0; color: #FFF">
-												3
-											</small>
-											</p>
-										</div>
+										<b>Leads</b>
+									</small>
+									<div class="space-6" style="margin: 0"></div>
+									<p>
+										<small style="text-transform: uppercase; font-size: 30px; padding: 0; color: #FFF">
+											3
+										</small>
+									</p>
+								</div>
 
 
-										<div class="infobox infobox-green" style="width: 200px; height: 70px; background-color: rgb(127, 192, 158);
+								<div class="infobox infobox-green" style="width: 200px; height: 70px; background-color: rgb(127, 192, 158);
 											margin: -10px; border: none; text-align: center; padding: 2px; overflow: visible">
-											<small style="text-transform: uppercase; font-size: 13px; font-weight: 400;
+									<small style="text-transform: uppercase; font-size: 16px; font-weight: 400;
 											line-height: 27px; color: #FFF">
-												<b>Ex-Alunos</b>
-											</small>
-											<div class="space-6" style="margin: 0"></div>
-											<p>
-											<small style="text-transform: uppercase; font-size: 25px; padding: 0; color: #FFF">
-												93
-											</small>
-											</p>
-										</div>
+										<b>Ex-Alunos</b>
+									</small>
+									<div class="space-6" style="margin: 0"></div>
+									<p>
+										<small style="text-transform: uppercase; font-size: 30px; padding: 0; color: #FFF">
+											93
+										</small>
+									</p>
+								</div>
 
-										<div class="space-6" style="float: right"></div>
+								<div class="space-6" style="float: right"></div>
 
-										<div class="infobox infobox-green" style="width: 200px; height: 70px; background-color: rgb(127, 192, 158);
+								<div class="infobox infobox-green" style="width: 200px; height: 70px; background-color: rgb(127, 192, 158);
 											margin:-10px; border: none; text-align: center; padding: 2px; overflow: visible">
-											<small style="text-transform: uppercase; font-size: 13px; font-weight: 400;
+									<small style="text-transform: uppercase; font-size: 13px; font-weight: 400;
 											line-height: 27px; color: #FFF">
-												<b>alunos em progresso</b>
-											</small>
-											<div class="space-6" style="margin: 0"></div>
-											<p>
-											<small style="text-transform: uppercase; font-size: 25px; padding: 0; color: #FFF">
-												13
-											</small>
-											</p>
-										</div>
+										<b>alunos em progresso</b>
+									</small>
+									<div class="space-6" style="margin: 0"></div>
+									<p>
+										<small style="text-transform: uppercase; font-size: 30px; padding: 0; color: #FFF">
+											13
+										</small>
+									</p>
+								</div>
 
-										<div class="infobox infobox-green" style="width: 210px; height: 70px; background-color: rgb(127, 192, 158);
+								<div class="infobox infobox-green" style="width: 210px; height: 70px; background-color: rgb(127, 192, 158);
 											margin:-10px; border: none; text-align: center; padding: 2px; overflow: visible">
-											<small style="text-transform: uppercase; font-size: 13px; font-weight: 400;
+									<small style="text-transform: uppercase; font-size: 13px; font-weight: 400;
 											line-height: 27px; color: #FFF">
-												<b>certificados emitidos</b>
-											</small>
-											<div class="space-6" style="margin: 0"></div>
-											<p>
-											<small style="text-transform: uppercase; font-size: 25px; padding: 0; color: #FFF">
-												112
-											</small>
-											</p>
-										</div>
+										<b>certificados emitidos</b>
+									</small>
+									<div class="space-6" style="margin: 0"></div>
+									<p>
+										<small style="text-transform: uppercase; font-size: 30px; padding: 0; color: #FFF">
+											112
+										</small>
+									</p>
+								</div>
 
-										<div class="infobox infobox-green" style="width: 200px; height: 70px; background-color: rgb(127, 192, 158);
-											margin:-10px; border: none; text-align: center; padding: 2px; overflow: visible">
-											<small style="text-transform: uppercase; font-size: 13px; font-weight: 400;
+								<div class="infobox infobox-green" style="width: 210px; height: 70px; background-color: rgb(127, 192, 158);
+										margin:-10px; border: none; text-align: center; padding: 2px; overflow: visible">
+									<small style="text-transform: uppercase; font-size: 13px; font-weight: 400;
 											line-height: 27px; color: #FFF">
-												<b>% média de progresso</b>
-											</small>
-											<div class="space-6" style="margin: 0"></div>
-											<p>
-											<small style="text-transform: uppercase; font-size: 25px; padding: 0; color: #FFF">
-												56,5%
-											</small>
-											</p>
-										</div>
-									</div>
+										<b>% média de progresso</b>
+									</small>
+									<div class="space-6" style="margin: 0"></div>
+									<p>
+										<small style="text-transform: uppercase; font-size: 30px; padding: 0; color: #FFF">
+											56,5%
+										</small>
+									</p>
+								</div>
+							</div>
 
-									<div class="col-sm-5">
-										<div class="widget-box">
-											<div class="widget-header widget-header-flat widget-header-small" style="background-color: rgba(90, 177, 133, 0.51)">
-	 												<small style="text-transform: uppercase; font-size: 16px; font-weight: 400;
+							<div class="col-sm-5">
+								<div class="widget-box">
+									<div class="widget-header widget-header-flat widget-header-small" style="background-color: rgba(90, 177, 133, 0.51)">
+										<small style="text-transform: uppercase; font-size: 16px; font-weight: 400;
 	 												line-height: 27px; color: #474747; margin-left: 23%; padding-bottom: 30px;">
-	 													<b>produtos mais concluídos</b>
-	 												</small>
- 											</div>
-											<div class="widget-body">
-												<div class="widget-main">
-													<canvas id="produtosConcluidos" style="height: 175px; width: 700px"></canvas>
-												</div><!-- /.widget-main -->
-											</div><!-- /.widget-body -->
-										</div><!-- /.widget-box -->
-									</div><!-- /.col -->
-									<div class="col-sm-5" style="float: right">
-										<div class="widget-box">
-											<div class="widget-header widget-header-flat widget-header-small" style="background-color: rgba(90, 177, 133, 0.51); padding-right: 27%">
-	 											<small style="text-transform: uppercase; font-size: 16px; font-weight: 400;
+											<b>produtos mais concluídos</b>
+										</small>
+									</div>
+									<div class="widget-body">
+										<div class="widget-main">
+											<canvas id="produtosConcluidos" style="height: 175px; width: 700px"></canvas>
+										</div>
+										<!-- /.widget-main -->
+									</div>
+									<!-- /.widget-body -->
+								</div>
+								<!-- /.widget-box -->
+							</div>
+							<!-- /.col -->
+							<div class="col-sm-5" style="float: right">
+								<div class="widget-box">
+									<div class="widget-header widget-header-flat widget-header-small" style="background-color: rgba(90, 177, 133, 0.51); padding-right: 27%">
+										<small style="text-transform: uppercase; font-size: 16px; font-weight: 400;
 	 												line-height: 27px; color: #474747; margin-left: 30%; padding-bottom: 30px">
-	 													<b>produtos menos concluídos</b>
-	 											</small>
- 											</div>
-											<div class="widget-body">
+											<b>produtos menos concluídos</b>
+										</small>
+									</div>
+									<div class="widget-body">
 
-												<div class="widget-main">
-													<canvas id="produtosNaoConcluidos" style="height: 175px; width: 700px"></canvas>
-												</div><!-- /.widget-main -->
-											</div><!-- /.widget-body -->
-										</div><!-- /.widget-box -->
-									</div><!-- /.col -->
+										<div class="widget-main">
+											<canvas id="produtosNaoConcluidos" style="height: 175px; width: 700px"></canvas>
+										</div>
+										<!-- /.widget-main -->
+									</div>
+									<!-- /.widget-body -->
+								</div>
+								<!-- /.widget-box -->
+							</div>
+							<!-- /.col -->
 
 
-								<!-- <div class="hr hr32 hr-dotted"></div> -->
+							<!-- <div class="hr hr32 hr-dotted"></div> -->
 
-									<div class="col-sm-12" style="margin-bottom: 5px">
-										<div class="widget-box">
-											<div class="widget-body">
-												<div class="widget-main">
-													<canvas id="novasMatriculas" style="height: 175px; width: 100%"></canvas>
-												</div><!-- /.widget-main -->
-											</div><!-- /.widget-body -->
-										</div><!-- /.widget-box -->
-									</div><!-- /.col -->
+							<div class="col-sm-12" style="margin-bottom: 5px">
+								<div class="widget-box">
+									<div class="widget-body">
+										<div class="widget-main">
+											<canvas id="novasMatriculas" style="height: 175px; width: 100%"></canvas>
+										</div>
+										<!-- /.widget-main -->
+									</div>
+									<!-- /.widget-body -->
+								</div>
+								<!-- /.widget-box -->
+							</div>
+							<!-- /.col -->
 
-										<div class="col-sm-12">
-												<div class="widget-body">
-													<div class="widget-main">
-														<canvas id="cursosCriados" style="height: 175px; width: 100%; margin-bottom: 5px"></canvas>
-													</div><!-- /.widget-main -->
-												</div><!-- /.widget-body -->
-										</div><!-- /.widget-box -->
-									</div><!-- /.col -->
-								</div><!-- /.row -->
-										<div class="col-sm-5" style="float: right; margin-top: 50px; margin-bottom: 50px">
-											<div class="widget-box">
-												<div class="widget-header widget-header-flat widget-header-small" style="background-color: rgba(90, 177, 133, 0.51); padding-left: 0">
-		 												<small style="text-transform: uppercase; font-size: 16px; font-weight: 400;
+							<div class="col-sm-12">
+								<div class="widget-box">
+									<div class="widget-body">
+										<div class="widget-main">
+											<canvas id="cursosCriados" style="height: 175px; width: 100%; margin-bottom: 5px"></canvas>
+										</div>
+										<!-- /.widget-main -->
+									</div>
+									<!-- /.widget-body -->
+								</div>
+								<!-- /.widget-box -->
+							</div>
+							<!-- /.col -->
+						</div>
+						<!-- /.row -->
+						<div class="col-sm-5" style="float: right; margin-top: 50px; margin-bottom: 50px">
+							<div class="widget-box">
+								<div class="widget-header widget-header-flat widget-header-small" style="background-color: rgba(90, 177, 133, 0.51); padding-left: 0">
+									<small style="text-transform: uppercase; font-size: 16px; font-weight: 400;
 		 												line-height: 27px; color: #474747; margin-left: 23%; padding-bottom: 30px; ">
-		 													<b>produtos com mais alunos</b>
-		 												</small>
-	 											</div>
-												<div class="widget-body">
-													<div class="widget-main">
-														<canvas id="productsStudentsCount" style="height: 175px; width: 700px"></canvas>
-													</div><!-- /.widget-main -->
-												</div><!-- /.widget-body -->
-											</div><!-- /.widget-box -->
-										</div><!-- /.col -->
+										<b>produtos com mais alunos</b>
+									</small>
+								</div>
+								<div class="widget-body">
+									<div class="widget-main">
+										<canvas id="productsStudentsCount" style="height: 175px; width: 700px"></canvas>
+									</div>
+									<!-- /.widget-main -->
+								</div>
+								<!-- /.widget-body -->
+							</div>
+							<!-- /.widget-box -->
+						</div>
+						<!-- /.col -->
 
- 										<div class="col-sm-5" style="float: left; margin-top: 54px; margin-bottom: 50px">
-										<div class="widget-box">
-											<div class="widget-header widget-header-flat widget-header-small" style="background-color: rgba(90, 177, 133, 0.51);
-											padding-left: 0%">
-	 											<small style="text-transform: uppercase; font-size: 16px; font-weight: 400;
+						<div class="col-sm-5" style="margin-left: 93px; margin-top: 50px; float: left">
+							<div class="widget-box">
+								<div class="widget-header widget-header-flat widget-header-small" style="background-color: rgba(90, 177, 133, 0.51);
+											padding-left: 5%">
+									<small style="text-transform: uppercase; font-size: 16px; font-weight: 400;
 	 												line-height: 27px; color: #474747; margin-left: 30%; padding-bottom: 30px; padding-right: 29%">
-	 													<b>Mapa de Clientes</b>
-	 											</small>
- 											</div>
-											<div class="widget-body">
+										<b>Mapa de Clientes</b>
+									</small>
+								</div>
+								<div class="widget-body">
+									<div class="widget-main">
+										<canvas id="clientsMap" style="height: 175px; width: 700px"></canvas>
+										<!-- /.widget-main -->
+									</div>
+									<!-- /.widget-body -->
+								</div>
+								<!-- /.widget-box -->
+							</div>
+							<!-- /.col -->
+						</div>
+						<!-- /.row -->
 
-												<div class="widget-main">
-													<canvas id="clientsMap" style="height: 175px; width: 700px"
-												</div><!-- /.widget-main -->
-											</div><!-- /.widget-body -->
-										</div><!-- /.widget-box -->
-									</div><!-- /.col -->
-  								</div><!-- /.row -->
-
-  								<!-- PAGE CONTENT ENDS -->
-							</div><!-- /.col -->
-						</div><!-- /.row -->
-					</div><!-- /.page-content -->
+						<!-- PAGE CONTENT ENDS -->
+					</div>
+					<!-- /.col -->
 				</div>
-			</div><!-- /.main-content -->
-		</div><!-- /.main-container -->
+				<!-- /.row -->
+			</div>
+			<!-- /.page-content -->
+		</div>
+	</div>
+	<!-- /.main-content -->
 
-		<!-- basic scripts -->
+	<!-- basic scripts -->
 
-		<!--[if !IE]> -->
-		<script src="assets/js/jquery-2.1.4.min.js"></script>
+	<!--[if !IE]> -->
+	<script src="assets/js/jquery-2.1.4.min.js"></script>
 
-		<!-- <![endif]-->
+	<!-- <![endif]-->
 
-		<!--[if IE]>
+	<!--[if IE]>
 <script src="assets/js/jquery-1.11.3.min.js"></script>
 <![endif]-->
-		<script type="text/javascript">
-			if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
-		</script>
-		<script src="assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		if ('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>" +
+			"<" + "/script>");
+	</script>
+	<script src="assets/js/bootstrap.min.js"></script>
 
-		<!-- page specific plugin scripts -->
+	<!-- page specific plugin scripts -->
 
-		<!--[if lte IE 8]>
+	<!--[if lte IE 8]>
 		  <script src="assets/js/excanvas.min.js"></script>
 		<![endif]-->
-		<script src="assets/js/jquery-ui.custom.min.js"></script>
-		<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
-		<script src="assets/js/jquery.easypiechart.min.js"></script>
-		<script src="assets/js/jquery.sparkline.index.min.js"></script>
-		<script src="assets/js/jquery.flot.min.js"></script>
-		<script src="assets/js/jquery.flot.pie.min.js"></script>
-		<script src="assets/js/jquery.flot.resize.min.js"></script>
+	<script src="assets/js/jquery.flot.min.js"></script>
+	<script src="assets/js/jquery.flot.pie.min.js"></script>
+	<script src="assets/js/jquery.flot.resize.min.js"></script>
+	<script src="assets/js/jquery-ui.custom.min.js"></script>
+	<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+	<script src="assets/js/jquery.easypiechart.min.js"></script>
+	<script src="assets/js/jquery.sparkline.index.min.js"></script>
 
-		<!-- ace scripts -->
-		<script src="assets/js/ace-elements.min.js"></script>
-		<script src="assets/js/ace.min.js"></script>
+	<!-- ace scripts -->
+	<script src="assets/js/ace-elements.min.js"></script>
+	<script src="assets/js/ace.min.js"></script>
 
-		<!-- inline scripts related to this page -->
-		<script type="text/javascript">
-			jQuery(function($) {
-				$('.easy-pie-chart.percentage').each(function(){
-					var $box = $(this).closest('.infobox');
-					var barColor = $(this).data('color') || (!$box.hasClass('infobox-dark') ? $box.css('color') : 'rgba(255,255,255,0.95)');
-					var trackColor = barColor == 'rgba(255,255,255,0.95)' ? 'rgba(255,255,255,0.25)' : '#E2E2E2';
-					var size = parseInt($(this).data('size')) || 50;
-					$(this).easyPieChart({
-						barColor: barColor,
-						trackColor: trackColor,
-						scaleColor: false,
-						lineCap: 'butt',
-						lineWidth: parseInt(size/10),
-						animate: ace.vars['old_ie'] ? false : 1000,
-						size: size
-					});
-				})
+	<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 
-				$('.sparkline').each(function(){
-					var $box = $(this).closest('.infobox');
-					var barColor = !$box.hasClass('infobox-dark') ? $box.css('color') : '#FFF';
-					$(this).sparkline('html',
-									 {
-										tagValuesAttribute:'data-values',
-										type: 'bar',
-										barColor: barColor ,
-										chartRangeMin:$(this).data('min') || 0
-									 });
-				});
+	<script type="text/javascript">
+		var ctx = document.getElementById('novasMatriculas').getContext('2d');
+		var chart = new Chart(ctx, {
+			// The type of chart we want to create
+			type: 'line',
 
+			// The data for our dataset
+			data: {
+				labels: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro",
+					"Novembro", "Dezembro"
+				],
+				datasets: [{
+					label: "NOVAS MATRÍCULAS",
+					backgroundColor: '#46a492',
+					borderColor: '#FFF',
+					data: [12, 10, 5, 32, 0, 3, 7, 3, 1, 20, 3, 15],
+				}]
+			},
 
-			  //flot chart resize plugin, somehow manipulates default browser resize event to optimize it!
-			  //but sometimes it brings up errors with normal resize event handlers
-			  $.resize.throttleWindow = false;
-
-			  var placeholder = $('#piechart-placeholder').css({'width':'90%' , 'min-height':'200px', 'padding':'4px'});
-			  var data = [
-				{ label: "Rio de Janeiro",  data: 38.7, color: "#4696a4"},
-				{ label: "São Paulo",  data: 24.5, color: "#469fa4"},
-				{ label: "Minas Gerais",  data: 8.2, color: "#296c7f"},
-				{ label: "Acre",  data: 18.6, color: "#155b6f"},
-				{ label: "Bahia",  data: 10, color: "#388095"}
-			  ]
-
-			  function drawPieChart(placeholder, data, position) {
-			 	  $.plot(placeholder, data, {
-					series: {
-						pie: {
-							show: true,
-							tilt:0.8,
-							highlight: {
-								opacity: 0.25
-							},
-							stroke: {
-								color: '#fff',
-								width: 2
-							},
-							startAngle: 2
-						}
-					},
-					legend: {
-						show: true,
-						position: position || "ne",
-						labelBoxBorderColor: null,
-						margin:[-30,15]
-					}
-					,
-					grid: {
-						hoverable: true,
-						clickable: true
-					}
-				 })
-			 }
-			 drawPieChart(placeholder, data);
-
-			 /**
-			 we saved the drawing function and the data to redraw with different position later when switching to RTL mode dynamically
-			 so that's not needed actually.
-			 */
-			 placeholder.data('chart', data);
-			 placeholder.data('draw', drawPieChart);
-
-
-			  //pie chart tooltip example
-			  var $tooltip = $("<div class='tooltip top in'><div class='tooltip-inner'></div></div>").hide().appendTo('body');
-			  var previousPoint = null;
-
-			  placeholder.on('plothover', function (event, pos, item) {
-				if(item) {
-					if (previousPoint != item.seriesIndex) {
-						previousPoint = item.seriesIndex;
-						var tip = item.series['label'] + " : " + item.series['percent']+'%';
-						$tooltip.show().children(0).text(tip);
-					}
-					$tooltip.css({top:pos.pageY + 10, left:pos.pageX + 10});
-				} else {
-					$tooltip.hide();
-					previousPoint = null;
+			// Configuration options go here
+			options: {}
+		});
+	</script>
+	<script type="text/javascript">
+		var ctx = $("#cursosCriados");
+		var myLineChart = new Chart(ctx, {
+			type: 'line',
+			data: {
+				labels: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro",
+					"Novembro", "Dezembro"
+				],
+				datasets: [{
+					label: "CURSOS CRIADOS",
+					backgroundColor: '#3cbda5',
+					borderColor: '#FFF',
+					data: [11, 4, 9, 5, 0, 3, 1, 8, 12, 20, 3, 15],
+					steppedLine: false
+				}]
+			},
+			options: {}
+		});
+	</script>
+	<script type="text/javascript">
+		var ctx = $("#produtosConcluidos");
+		var myDoughnutChart = new Chart(ctx, {
+			type: 'doughnut',
+			data: {
+				labels: ["Cálculo 3A", "Calculo 2A", "Fisica III", "Fisíca Experimental", "Álgebra"],
+				datasets: [{
+					label: "PRODUTOS MAIS CONCLUÍDOS",
+					backgroundColor: ['#5ab185', '#7ba247', '#5cc585', '#397751', '#19dc64'],
+					borderColor: '#FFF',
+					data: [43, 27, 19, 22, 33],
+				}]
+			},
+			options: {
+				legend: {
+					display: false,
 				}
-
-			 });
-
-				/////////////////////////////////////
-				$(document).one('ajaxloadstart.page', function(e) {
-					$tooltip.remove();
-				});
-
-
-
-
-				var d1 = [];
-				for (var i = 0; i < Math.PI * 2; i += 0.5) {
-					d1.push([i, Math.sin(i)]);
+			}
+		});
+	</script>
+	<script type="text/javascript">
+		var ctx = $("#clientsMap");
+		var myPieChart = new Chart(ctx, {
+			type: 'pie',
+			data: {
+				labels: ["Rio de Janeiro", "São Paulo", "Minas Gerais", "Rio Grande do Sul", "Bahia"],
+				datasets: [{
+					label: "MAPA DE CLIENTES",
+					backgroundColor: ['#5ab185', '#7ba247', '#5cc585', '#397751', '#19dc64'],
+					borderColor: '#FFF',
+					data: [54, 3, 25, 12, 10],
+				}]
+			},
+			options: {
+				legend: {
+					display: false,
 				}
-
-				var d2 = [];
-				for (var i = 0; i < Math.PI * 2; i += 0.5) {
-					d2.push([i, Math.cos(i)]);
+			}
+		});
+	</script>
+	<script type="text/javascript">
+		var ctx = $("#productsStudentsCount");
+		var myBarChart = new Chart(ctx, {
+			type: 'horizontalBar',
+			data: {
+				labels: ["Cálculo 3A", "Geometria Analítica", "Prog IV", "Pré-Cálculo", "Física III"],
+				datasets: [{
+					label: "ALUNOS ATIVOS",
+					backgroundColor: ['#5ab185', '#7ba247', '#5cc585', '#397751', '#19dc64'],
+					borderColor: '#FFF',
+					data: [7, 3, 6, 10, 3],
+				}]
+			},
+			options: {
+				legend: {
+					display: false,
 				}
-
-				var d3 = [];
-				for (var i = 0; i < Math.PI * 2; i += 0.2) {
-					d3.push([i, Math.tan(i)]);
+			}
+		});
+	</script>
+	<script type="text/javascript">
+		var ctx = $("#produtosNaoConcluidos");
+		var myDoughnutChart = new Chart(ctx, {
+			type: 'doughnut',
+			data: {
+				labels: ["Equações", "Eletromag", "Mecânica", "MecFlu", "MecSol"],
+				datasets: [{
+					label: "PRODUTOS MENOS CONCLUÍDOS",
+					backgroundColor: ['#5ab185', '#7ba247', '#5cc585', '#397751', '#19dc64'],
+					borderColor: '#FFF',
+					data: [1, 3, 4, 9, 2],
+				}]
+			},
+			options: {
+				legend: {
+					display: false,
 				}
+			}
+		});
+	</script>
+</body>
 
-
-				var sales_charts = $('#sales-charts').css({'width':'100%' , 'height':'220px'});
-				$.plot("#sales-charts", [
-					{ label: "Domains", data: d1 },
-					{ label: "Hosting", data: d2 },
-					{ label: "Services", data: d3 }
-				], {
-					hoverable: true,
-					shadowSize: 0,
-					series: {
-						lines: { show: true },
-						points: { show: true }
-					},
-					xaxis: {
-						tickLength: 0
-					},
-					yaxis: {
-						ticks: 10,
-						min: -2,
-						max: 2,
-						tickDecimals: 3
-					},
-					grid: {
-						backgroundColor: { colors: [ "#fff", "#fff" ] },
-						borderWidth: 1,
-						borderColor:'#555'
-					}
-				});
-
-
-				$('#recent-box [data-rel="tooltip"]').tooltip({placement: tooltip_placement});
-				function tooltip_placement(context, source) {
-					var $source = $(source);
-					var $parent = $source.closest('.tab-content')
-					var off1 = $parent.offset();
-					var w1 = $parent.width();
-
-					var off2 = $source.offset();
-					//var w2 = $source.width();
-
-					if( parseInt(off2.left) < parseInt(off1.left) + parseInt(w1 / 2) ) return 'right';
-					return 'left';
-				}
-
-
-				$('.dialogs,.comments').ace_scroll({
-					size: 300
-			    });
-
-
-				//Android's default browser somehow is confused when tapping on label which will lead to dragging the task
-				//so disable dragging when clicking on label
-				var agent = navigator.userAgent.toLowerCase();
-				if(ace.vars['touch'] && ace.vars['android']) {
-				  $('#tasks').on('touchstart', function(e){
-					var li = $(e.target).closest('#tasks li');
-					if(li.length == 0)return;
-					var label = li.find('label.inline').get(0);
-					if(label == e.target || $.contains(label, e.target)) e.stopImmediatePropagation() ;
-				  });
-				}
-
-				$('#tasks').sortable({
-					opacity:0.8,
-					revert:true,
-					forceHelperSize:true,
-					placeholder: 'draggable-placeholder',
-					forcePlaceholderSize:true,
-					tolerance:'pointer',
-					stop: function( event, ui ) {
-						//just for Chrome!!!! so that dropdowns on items don't appear below other items after being moved
-						$(ui.item).css('z-index', 'auto');
-					}
-					}
-				);
-				$('#tasks').disableSelection();
-				$('#tasks input:checkbox').removeAttr('checked').on('click', function(){
-					if(this.checked) $(this).closest('li').addClass('selected');
-					else $(this).closest('li').removeClass('selected');
-				});
-
-
-				//show the dropdowns on top or bottom depending on window height and menu position
-				$('#task-tab .dropdown-hover').on('mouseenter', function(e) {
-					var offset = $(this).offset();
-
-					var $w = $(window)
-					if (offset.top > $w.scrollTop() + $w.innerHeight() - 100)
-						$(this).addClass('dropup');
-					else $(this).removeClass('dropup');
-				});
-
-			})
-		</script>
-		<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-		<script type="text/javascript">
-			var ctx = document.getElementById('novasMatriculas').getContext('2d');
-			var chart = new Chart(ctx, {
-			    // The type of chart we want to create
-			    type: 'line',
-
-			    // The data for our dataset
-			    data: {
-			        labels: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"],
-			        datasets: [{
-			        	label: "NOVAS MATRÍCULAS",
-			            backgroundColor: '#46a492',
-			            borderColor: '#FFF',
-			            data: [12, 10, 5, 32, 0, 3, 7, 3, 1, 20, 3, 15],
-			        }]
-			    },
-
-			    // Configuration options go here
-			    options: {}
-			});
-		</script>
-		<script type="text/javascript">
-			var ctx = $("#produtosConcluidos");
-			var myDoughnutChart = new Chart(ctx, {
-			    type: 'doughnut',
-			    data: {
-			    	labels: ["Cálculo 3A", "Cálculo 2A", "Física III", "Física Experimental", "Álgebra"],
-			    	datasets: [{
-			    		label: "PRODUTOS MAIS CONCLUÍDOS",
-			    		backgroundColor: ['#5ab185', '#7ba247', '#5cc585', '#397751', '#19dc64'],
-			    		borderColor: '#FFF',
-			    		data: [43, 27, 19, 22, 33],
-			    	}]
-			    },
-			    options: {
-			    	legend: {
-			    	display: false,
-			    	}
-			    }
-			});
-		</script>
-		<script type="text/javascript">
-			var ctx = $("#cursosCriados");
-			var myLineChart = new Chart(ctx, {
-			    type: 'line',
-			    data: {
-			        labels: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"],
-			    	datasets: [{
-			    		label: "CURSOS CRIADOS",
-			    		backgroundColor: '#3cbda5',
-			    		borderColor: '#FFF',
-			            	data: [11, 4, 9, 5, 0, 3, 1, 8, 12, 20, 3, 15],
-			            	steppedLine: false,
-			    	}]
-			    },
-			    options: {}
-			});
-		</script>
-		<script type="text/javascript">
-			var ctx = $("#clientsMap");
-			var myPieChart = new Chart(ctx,{
-			    type: 'pie',
-			    data: {
-			        labels: ["Rio de Janeiro", "São Paulo", "Minas Gerais", "Rio Grande do Sul", "Bahia"],
-			    	datasets: [{
-			    		label: "MAPA DE CLIENTES",
-			    		backgroundColor: ['#5ab185', '#7ba247', '#5cc585', '#397751', '#19dc64'],
-			    		borderColor: '#FFF',
-			            	data: [54, 3, 25, 12, 10],
-			    	}]
-			    },
-			    options: {
-			    	legend: {
-			    	display: false,
-			    	}
-			    }
-			});
-		</script>
-		<script type="text/javascript">
-			var ctx = $("#productsStudentsCount");
-			var myBarChart = new Chart(ctx, {
-			    type: 'horizontalBar',
-			    data: {
-			        labels: ["Cálculo 3A", "Geometria Analítica", "Prog IV", "Pré-Cálculo", "Física III"],
-			    	datasets: [{
-			    		label: "ALUNOS ATIVOS",
-			    		backgroundColor: ['#5ab185', '#7ba247', '#5cc585', '#397751', '#19dc64'],
-			    		borderColor: '#FFF',
-			            	data: [7, 3, 6, 10, 3],
-			    	}]
-			     },
-			    options: {
-			    	legend: 
-			    	display: false,
-			    	}
-			    }
-			});
-		</script>
-		<script type="text/javascript">
-			var ctx = $("#produtosNaoConcluidos");
-			var myDoughnutChart = new Chart(ctx, {
-			    type: 'doughnut',
-			    data: {
-			    	labels: ["Equações", "Eletromag", "Mecânica", "MecFlu", "MecSol"],
-			    	datasets: [{
-			    		label: "PRODUTOS MENOS CONCLUÍDOS",
-			    		backgroundColor: ['#5ab185', '#7ba247', '#5cc585', '#397751', '#19dc64'],
-			    		borderColor: '#FFF',
-			    		data: [1, 3, 4, 9, 2],
-			    	}]
-			    },
-			    options: {
-			    	legend: {
-			    	display: false,
-			    	}
-			    }
-			});
-		</script>
-	</body>
 </html>
